@@ -1,4 +1,5 @@
 geoip, cn, direct
+DOMAIN-SUFFIX,cn,DIRECT
 #lan
 host-suffix, local, direct
 ip-cidr, 10.0.0.0/8, direct
@@ -25,5 +26,3 @@ USER-AGENT,PayPal*,DIRECT
 DOMAIN-SUFFIX,paypal.com,DIRECT
 DOMAIN-SUFFIX,paypal.me,DIRECT
 DOMAIN-SUFFIX,paypalobjects.com,DIRECT
-#other
-DOMAIN-SUFFIX,cn,DIRECT
