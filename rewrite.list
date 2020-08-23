@@ -1,4 +1,4 @@
-hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com
+hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn
 ^(http|https):\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
 ^(http|https):\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
 #weibo
@@ -8,3 +8,12 @@ hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com
 #wiki
 ^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) url 302 https://www.wikiwand.com/zh$2
 ^https://(\w*).(m.)?wikipedia.org/wiki url 302 https://www.wikiwand.com/$1
+
+# -----Adgurand
+^https:\/\/mobile-api\.adguard\.com\/api\/1\.0\/ios_validate_receipt$ url 302 https://raw.githubusercontent.com/langkhach270389/Scripting/master/Adguard.rsp
+# -----哔哩哔哩动画 精简去广告
+^https:\/\/app\.bilibili\.com\/(search\/resource|x\/(resource\/show\/tab|v2\/(view|rank|feed|reply\/main|account\/mine))) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/Bilibili.js
+# -----VSCO滤镜VIP
+^https?:\/\/vsco\.co\/api\/subscriptions\/2.1\/user-subscriptions\/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/vsco.js
+# -----WPS
+# ^https://account.wps.cn/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
