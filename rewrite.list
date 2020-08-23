@@ -1,0 +1,10 @@
+hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com
+^(http|https):\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
+^(http|https):\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
+#weibo
+^http:\/\/t\.cn url 302 https://sinaurl.cn
+#youtube ad
+^(http|https):\/\/[\w-]+\.googlevideo\.com\/[\w?=&.]+(&oad|ctier) url reject-200
+#wiki
+^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) url 302 https://www.wikiwand.com/zh$2
+^https://(\w*).(m.)?wikipedia.org/wiki url 302 https://www.wikiwand.com/$1
