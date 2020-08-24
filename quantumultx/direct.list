@@ -26,7 +26,3 @@ USER-AGENT,PayPal*,DIRECT
 DOMAIN-SUFFIX,paypal.com,DIRECT
 DOMAIN-SUFFIX,paypal.me,DIRECT
 DOMAIN-SUFFIX,paypalobjects.com,DIRECT
-        
-# > others
-geoip, cn, direct
-DOMAIN-SUFFIX,cn,DIRECT
