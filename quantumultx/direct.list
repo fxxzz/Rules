@@ -1,4 +1,4 @@
-#lan
+# > lan
 host-suffix, local, direct
 ip-cidr, 10.0.0.0/8, direct
 ip-cidr, 127.0.0.0/8, direct
@@ -6,7 +6,7 @@ ip-cidr, 172.16.0.0/12, direct
 ip-cidr, 192.168.0.0/16, direct
 ip-cidr, 224.0.0.0/24, direct
 
-#apple
+# > apple
 DOMAIN-SUFFIX,aaplimg.com,DIRECT
 DOMAIN-SUFFIX,apple.co,DIRECT
 DOMAIN-SUFFIX,apple.com,DIRECT
@@ -21,12 +21,12 @@ DOMAIN-KEYWORD,apple.com.akadns.net,DIRECT
 DOMAIN-KEYWORD,icloud.com.akadns.net,DIRECT
 DOMAIN,testflight.apple.com,DIRECT
 
-#paypal
+# > paypal
 USER-AGENT,PayPal*,DIRECT
 DOMAIN-SUFFIX,paypal.com,DIRECT
 DOMAIN-SUFFIX,paypal.me,DIRECT
 DOMAIN-SUFFIX,paypalobjects.com,DIRECT
-
-#others
+        
+# > others
 geoip, cn, direct
 DOMAIN-SUFFIX,cn,DIRECT
