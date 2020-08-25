@@ -1,11 +1,8 @@
 hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn, duckduckgo.com
 
 # > boxjs
-#^https?://boxjs.com/api url script-request-body https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
-#^https?://boxjs.com(/home|/sub|/my|/app|/log|/revert)?($|\/) url script-echo-response https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
-
-^https?://boxjs.com/api url script-request-body https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
-^https?://boxjs.com(/home|/sub|/my|/app|/log|/revert)?($|\/) url script-echo-response https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js
+^https?://boxjs.com/api url script-request-body https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
+^https?://boxjs.com(/home|/sub|/my|/app|/log|/revert)?($|\/) url script-echo-response https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
 
 # > q-search
 ^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ url 302 https://duckduckgo.com/?ia=about&q=$1
