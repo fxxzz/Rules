@@ -19,7 +19,6 @@ DOMAIN-SUFFIX,me.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
 DOMAIN-KEYWORD,apple.com.akadns.net,DIRECT
 DOMAIN-KEYWORD,icloud.com.akadns.net,DIRECT
-DOMAIN,testflight.apple.com,DIRECT
 
 # > paypal
 USER-AGENT,PayPal*,DIRECT
