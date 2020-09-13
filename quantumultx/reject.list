@@ -98,17 +98,6 @@ DOMAIN,splashqqlive.gtimg.com,REJECT
 DOMAIN,wa.gtimg.com,REJECT
 DOMAIN,wxsnsdy.wxs.qq.com,REJECT
 DOMAIN,wxsnsdythumb.wxs.qq.com,REJECT
-# > Tencent Music (TME)
-DOMAIN,ad.tencentmusic.com,REJECT
-DOMAIN,adserviceretry.kugou.com,REJECT
-DOMAIN,ads.service.kugou.com,REJECT
-DOMAIN,adsfile.bssdlbig.kugou.com,REJECT
-DOMAIN,g.koowo.com,REJECT
-DOMAIN,kgmobilestat.kugou.com,REJECT
-DOMAIN,kgmobilestatbak.kugou.com,REJECT
-DOMAIN,mobilelog.kugou.com,REJECT
-DOMAIN,mobilead.kuwo.cn,REJECT
-DOMAIN,rich.kuwo.cn,REJECT
 # > Zhihu
 USER-AGENT,AVOS*,REJECT
 DOMAIN,appcloud2.zhihu.com,REJECT

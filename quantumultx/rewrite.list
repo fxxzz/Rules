@@ -1,15 +1,8 @@
-hostname = www.google.cn, *.googlevideo.com, *.youtube.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn, duckduckgo.com, mp.weixin.qq.com, interface*.music.163.com
+hostname = www.google.cn, *.googlevideo.com, *.youtube.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn, mp.weixin.qq.com, interface*.music.163.com
 
 # > boxjs
 ^https?://boxjs.com/api url script-request-body https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
 ^https?://boxjs.com(/home|/sub|/my|/app|/log|/revert)?($|\/) url script-echo-response https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
-
-# > q-search
-#^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ url 302 https://duckduckgo.com/?ia=about&q=$1
-#^https:\/\/duckduckgo.com\/\?q=bd\+([^&]+).+ url 302 https://www.baidu.com/s?wd=$1
-#^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ url 302 https://github.com/search?q=$1
-#^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ url 302 https://www.google.com/search?&tbm=isch&q=$1
-#^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://www.google.com/search?q=$1
 
 # > Google.cn
 ^(http|https):\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
@@ -36,7 +29,7 @@ hostname = www.google.cn, *.googlevideo.com, *.youtube.com, *.wikipedia.org, *.w
 ^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) url reject
 ^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
 
-# > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
+# > NetEase CloudMusic
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
 ^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ url reject
 
