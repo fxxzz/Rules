@@ -1,4 +1,4 @@
-hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn, duckduckgo.com
+hostname = www.google.cn, *.googlevideo.com, *.youtube.com, *.wikipedia.org, *.wikiwand.com, mobile-api.adguard.com, app.bilibili.com, vsco.co, account.wps.cn, duckduckgo.com, mp.weixin.qq.com, interface*.music.163.com
 
 # > boxjs
 ^https?://boxjs.com/api url script-request-body https://gitee.com/chavyleung/scripts/raw/master/chavy.box.js
@@ -15,12 +15,6 @@ hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com, mo
 ^(http|https):\/\/(www.)?(g|google)\.cn url 302 https://www.google.com
 ^(http|https):\/\/(ditu|maps).google\.cn url 302 https://maps.google.com
 
-# > weibo
-^http:\/\/t\.cn url 302 https://sinaurl.cn
-
-# > youtube ad
-^(http|https):\/\/[\w-]+\.googlevideo\.com\/[\w?=&.]+(&oad|ctier) url reject-200
-
 # > wiki
 ^https://zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) url 302 https://www.wikiwand.com/zh$2
 ^https://(\w*).(m.)?wikipedia.org/wiki url 302 https://www.wikiwand.com/$1
@@ -36,3 +30,15 @@ hostname = www.google.cn, *.googlevideo.com, *.wikipedia.org, *.wikiwand.com, mo
 
 # > wps
 ^https://account.wps.cn/api/users/ url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Wps.js
+
+# > youtube ad
+^https?:\/\/\w+\.youtube\.com\/api\/stats\/ads url reject
+^https?:\/\/\w+\.youtube\.com\/(pagead|ptracking) url reject
+^https://[\s\S]*\.googlevideo\.com/.*&(oad|ctier) url reject-200
+
+# > NetEase CloudMusic - interface*.music.163.com,59.111.181.*
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/eapi\/ad\/ url reject
+^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ url reject
+
+# > Tencent WeChat - mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement) url reject
