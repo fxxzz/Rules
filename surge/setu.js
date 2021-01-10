@@ -1,5 +1,5 @@
 let apikey = '181204475f85268baa86d2'
-let r18 = 2
+let r18 = 0
 let keyword = ''//搜索关键字
 var params = {
     url:encodeURI("https://api.lolicon.app/setu?apikey=" + apikey + "&r18=" + r18 + "&keyword=" + keyword),
