@@ -1,0 +1,8 @@
+#!name=GitHub加速
+#!desc=githubusercontent to sevencdn
+
+[URL Rewrite]
+https:\/\/raw.githubusercontent.com https://raw.sevencdn.com 302
+
+[MITM]
+hostname = %INSERT% raw.sevencdn.com, raw.githubusercontent.com
