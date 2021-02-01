@@ -82,6 +82,6 @@ function jksb() {
         result='jksb❌❌'
     }
     console.log(result)
-    $notification.post(result,text+";"+textt+";"+result,"",{url:'https://jksb.v.zzu.edu.cn'})
+    $notification.post(result,text+";"+textt+";"+result,"")
     })
 }
