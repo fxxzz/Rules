@@ -1,20 +1,13 @@
 /*
-仅限surge使用,
-第76行请自行修改，
-第76行请自行修改，
-第76行请自行修改。
-使用前，在surge脚本编辑器复制下面3行,username改为学号,password改为密码(不要少了引号''),只需运行1次。
 
-
- //下面
 persistentStore.write('username','zzuid')
 persistentStore.write('password','zzupw')
 $done
- //上面
- 
- 
- 在[Script]下添加
+
+
+[Script]
  健康打卡= type=cron,cronexp=15 0,3,6,9 * * *,script-path=https://raw.githubusercontent.com/fxxzz/Rules/master/surge/jksb.js,script-update-interval=0,script-update-interval=0
+
 */
 
 
