@@ -1,22 +1,105 @@
 {
-  "id": "fxxzz.app.sub",
-  "name": "fxxzz 应用订阅",
-  "author": "@fxxzz",
-  "icon": "https://avatars3.githubusercontent.com/u/23498579?s=460&u=1e87605e4abc4e6ecf3edd8b1d730227f54db4d4&v=4",
-  "repo": "https://github.com/fxxzz",
+  "id": "vei.app.sub",
+  "name": "chouchoui 应用订阅",
+  "author": "@chouchoui",
+  "icon": "https://avatars3.githubusercontent.com/u/14866249?s=460&u=40faa1309b2303e1a3d9cec8f57f05c7005256de&v=4",
+  "repo": "https://github.com/chouchoui/QuanX",
   "apps": [
-
-
     {
-      "id": "cuuc",
-      "name": "CU云加速",
-      "keys": ["@cuuc.cookie"],
-      "icons": [],
-      "author": "@dompling",
-      "descs_html": ["Cookie有效时间一周"],
-      "repo": "https://github.com/dompling/Script/blob/master/cuuc/cuuc.js",
-      "script": "https://raw.githubusercontent.com/dompling/Script/master/cuuc/cuuc.js"
+      "id": "vei.nga",
+      "name": "NGA",
+      "keys": [
+        "vei_nga_cookie",
+        "vei_nga_content_type",
+        "vei_nga_user_agent",
+        "vei_nga_mission",
+        "vei_nga_body"
+      ],
+      "author": "@chouchoui",
+      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/nga",
+      "icons": [
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.png",
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/nga/nga.task.png"
+      ]
+    },
+    {
+      "id": "vei.angelalign",
+      "name": "时代天使小程序",
+      "keys": ["vei_angelalign_headers"],
+      "author": "@chouchoui",
+      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/angelalign",
+      "icons": [
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.png",
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/angelalign/angelalign.task.png"
+      ]
+    },
+    {
+      "id": "vei.qmkg",
+      "name": "全民K歌",
+      "keys": ["vei_qmkg_url", "vei_qmkg_headers", "vei_qmkg_body"],
+      "author": "@GideonSenku, @chouchoui",
+      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/qmkg",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/qmkg.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/qmkg.png"
+      ]
+    },
+    {
+      "id": "vei.ikea20201028",
+      "name": "宜家20201028活动签到",
+      "keys": ["vei_ikea_20201028_checkin_authorization"],
+      "author": "@chouchoui",
+      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/ikea/20201028",
+      "icons": [
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ikea/ikea.png",
+        "https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ikea/ikea.task.png"
+      ]
+    },
+    {
+      "id": "vei.bilibili",
+      "name": "bilibili去广告自定义",
+      "keys": ["vei_bilibili_feed_black"],
+      "settings": [
+        {
+          "id": "vei_bilibili_feed_black",
+          "name": "首页UP主黑名单",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "UP主名称1;UP主名称2",
+          "autoGrow": true,
+          "rows": 5,
+          "desc": "以英文逗号分隔多个号码"
+        }
+      ],
+      "author": "@blackmatrix7, @chouchoui",
+      "repo": "https://github.com/chouchoui/QuanX/tree/master/Scripts/bilibili",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/bilibili.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/bilibili.png"
+      ]
+    },
+    {
+      "id": "hackl0us.aqius",
+      "name": "将 iOS 系统原生 天气 App 的空气质量标准改为 AQI-US",
+      "keys": ["hackl0us_aqi_token"],
+      "settings": [
+        {
+          "id": "hackl0us_aqi_token",
+          "name": "aqicn API Token",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "token",
+          "autoGrow": true,
+          "rows": 3,
+          "desc": ""
+        }
+      ],
+      "author": "@hackl0us",
+      "repo": "https://github.com/Hackl0us/SS-Rule-Snippet/tree/master/Scripts/Surge",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/weather.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/weather.png"
+      ]
     }
-
-
-]}
+  ]
+}
