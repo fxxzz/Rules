@@ -1,20 +1,21 @@
 {
-	"id": "fxxzz.app.sub",
-	"name": "fxxzz应用订阅",
-	"author": "@fxxzz",
-	"icon": "https://avatars0.githubusercontent.com/u/9592236",
-	"repo": "https://github.com/fxxzz/Rule",
-	"apps": [ {
-      "id": "_163GameVip",
-      "name": "网易游戏会员",
-      "keys": ["id77_163GameVip"],
-      "script": "https://raw.githubusercontent.com/id77/QuantumultX/master/task/163GameVip.js",
-      "author": "@id77",
-      "repo": "https://raw.githubusercontent.com/id77/QuantumultX/master/task/163GameVip.js",
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/163GameVip.png",
-        "https://raw.githubusercontent.com/id77/QuantumultX/master/icon/163GameVip.png"
-      ]
+  "id": "fxxzz.app.sub",
+  "name": "fxxzz 应用订阅",
+  "author": "@fxxzz",
+  "icon": "https://avatars3.githubusercontent.com/u/23498579?s=460&u=1e87605e4abc4e6ecf3edd8b1d730227f54db4d4&v=4",
+  "repo": "https://github.com/fxxzz",
+  "apps": [
+
+
+    {
+      "id": "cuuc",
+      "name": "CU云加速",
+      "keys": ["@cuuc.cookie"],
+      "icons": [],
+      "author": "@dompling",
+      "descs_html": ["Cookie有效时间一周"],
+      "repo": "https://github.com/dompling/Script/blob/master/cuuc/cuuc.js",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/cuuc/cuuc.js"
     }
 
 
