@@ -1,11 +1,10 @@
 {
-  "id": "fxxzz.app.sub",
-  "name": "fxxzz 脚本订阅",
-  "description": "该订阅兼容BoxJs以及QX Gallery",
-  "author": "@fxxzz",
-  "icon": "https://avatars2.githubusercontent.com/u/53217160",
-  "repo": "https://github.com/fxxzz/Rule",
-  "apps": [
+	"id": "fxxzz.app.sub",
+	"name": "fxxzz应用订阅",
+	"author": "@fxxzz",
+	"icon": "",
+	"repo": "https://github.com/fxxzz/Rule",
+	"apps": [
 
 	{
 			"id": "jksb",
@@ -19,6 +18,7 @@
 				"https://raw.githubusercontent.com/Orz-3/mini/master/elem.png",
 				"https://raw.githubusercontent.com/Orz-3/task/master/elem.png"
 			]
-		},
+		}
+
 
 ]}
