@@ -151,8 +151,7 @@ function post() {
 
 
 function test(){
-  const url = {url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=', headers:head, 
-body:"day6=b&did=1&door=&men6=a&"+ uid}
+  const url = {url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=', headers:head, body:"day6=b&did=1&door=&men6=a&"+ uid}
   $nobyda.get(url,function(error, response, data) {
     try {
       if (data.match(datetoday)){
