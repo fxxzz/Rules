@@ -3,7 +3,7 @@
   "name": "fxxzz 应用订阅",
   "author": "@fxxzz",
   "icon": "",
-  "repo": "https://github.com/fxxzz/Rule",
+  "repo": "https://github.com/fxxzz/Rules",
   "apps": [
     {
       "id": "zzujksb",
@@ -12,7 +12,7 @@
         "zzujksb"
       ],
       "author": "@fxxzz",
-      "repo": "https://github.com/fxxzz/Rule",
+      "repo": "https://github.com/fxxzz/Rules",
       "icons": ["https://github.com/fxxzz/Rules/raw/master/img/jksb.png"
                 "https://github.com/fxxzz/Rules/raw/master/img/jksb.png"
          ]
