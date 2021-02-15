@@ -13,7 +13,8 @@
       ],
       "author": "@fxxzz",
       "repo": "https://github.com/fxxzz/Rules",
-      "icons": ["https://github.com/fxxzz/Rules/raw/master/img/jksb.png"
+      "script": "https://github.com/fxxzz/Rules/raw/master/jksb.js",
+      "icons": ["https://github.com/fxxzz/Rules/raw/master/img/jksb.png",
                 "https://github.com/fxxzz/Rules/raw/master/img/jksb.png"
          ]
     }
