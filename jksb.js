@@ -92,7 +92,7 @@ function jksb(){
 function getuid(){
   const url={
     url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/first0',
-      headers:head
+    headers:head
   }
   $nobyda.get(url,function(error, response, data) {
     uid=String(data.toString().match(/\ptopid.*\d\d/))
@@ -113,7 +113,11 @@ function getuid(){
  
 
 function main() {
-  const url = {url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb', headers:head, body:"day6=b&did=1&door=&men6=a&"+ uid}
+  const url = {
+    url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
+    headers:head,
+    body:"day6=b&did=1&door=&men6=a&"+ uid
+  }
   $nobyda.post(url, (error, response,data) => {
     try {
       if (data.match(/#00f">20/)) {
@@ -132,7 +136,11 @@ function main() {
 
 
 function post() {
-  const url = {url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb', headers:head, body:"myvs_1=%E5%90%A6&myvs_2=%E5%90%A6&myvs_3=%E5%90%A6&myvs_4=%E5%90%A6&myvs_5=%E5%90%A6&myvs_6=%E5%90%A6&myvs_7=%E5%90%A6&myvs_8=%E5%90%A6&myvs_9=%E5%90%A6&myvs_10=%E5%90%A6&myvs_11=%E5%90%A6&myvs_12=%E5%90%A6&myvs_13a=41&myvs_13b=4101&myvs_13c=%E6%B2%B3%E5%8D%97%E7%9C%81.%E9%83%91%E5%B7%9E%E5%B8%82.%E6%96%B0%E5%AF%86%E5%B8%82&myvs_14=%E5%90%A6&myvs_14b=&memo22=%E6%88%90%E5%8A%9F%E8%8E%B7%E5%8F%96&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu=113.374641&weidu=34.562874&"+uid}
+  const url = {
+    url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
+    headers:head,
+    body:"myvs_1=%E5%90%A6&myvs_2=%E5%90%A6&myvs_3=%E5%90%A6&myvs_4=%E5%90%A6&myvs_5=%E5%90%A6&myvs_6=%E5%90%A6&myvs_7=%E5%90%A6&myvs_8=%E5%90%A6&myvs_9=%E5%90%A6&myvs_10=%E5%90%A6&myvs_11=%E5%90%A6&myvs_12=%E5%90%A6&myvs_13a=41&myvs_13b=4101&myvs_13c=%E6%B2%B3%E5%8D%97%E7%9C%81.%E9%83%91%E5%B7%9E%E5%B8%82.%E6%96%B0%E5%AF%86%E5%B8%82&myvs_14=%E5%90%A6&myvs_14b=&memo22=%E6%88%90%E5%8A%9F%E8%8E%B7%E5%8F%96&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu=113.374641&weidu=34.562874&"+uid
+  }
   $nobyda.post(url, (error, response, data) => {
     try{
       if (data.match(/感谢/)) {
@@ -151,7 +159,11 @@ function post() {
 
 
 function test(){
-  const url = {url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=', headers:head, body:"day6=b&did=1&door=&men6=a&"+ uid}
+  const url = {
+    url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=',
+    headers:head,
+    body:"day6=b&did=1&door=&men6=a&"+ uid
+  }
   $nobyda.get(url,function(error, response, data) {
     try {
       if (data.match(datetoday)){
