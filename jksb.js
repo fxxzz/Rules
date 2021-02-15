@@ -1,10 +1,53 @@
 const $nobyda = nobyda();
 zzujksb=$nobyda.read('zzujksb')
 
+
+if ($nobyda.isRequest) {
+  GetCookie()
+} else {
 login()
 setTimeout(function(){main();},2000)
 setTimeout(function(){jksb();},3000)
 setTimeout(function(){end();},4000)
+}
+
+
+
+function GetCookie() {
+  var headerCookie = $request.headers["Cookie"];
+  if (headerCookie) {
+    if ($nobyda.read("zzujksb") != undefined) {
+      if ($nobyda.read("zzujksb") != headerCookie) {
+        if (headerCookie.indexOf("zzu_zzj_20200302") != -1) {
+          var cookie = $nobyda.write(headerCookie, "zzujksb");
+          if (!cookie) {
+            $nobyda.notify("更新贴吧Cookie失败‼️", "", "");
+          } else {
+            $nobyda.notify("更新贴吧Cookie成功 🎉", "", "");
+          }
+        }
+      }
+    } else {
+      if (headerCookie.indexOf("zzu_zzj_20200302") != -1) {
+        var cookie = $nobyda.write(headerCookie, "zzujksb");
+        if (!cookie) {
+          $nobyda.notify("首次写入贴吧Cookie失败‼️", "", "");
+        } else {
+          $nobyda.notify("首次写入贴吧Cookie成功 🎉", "", "");
+        }
+      }
+    }
+  }
+  $nobyda.done()
+}
+
+
+
+
+
+
+
+
 
 
 function login(){
