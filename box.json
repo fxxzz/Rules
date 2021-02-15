@@ -13,10 +13,10 @@
 				"zzujksb"
 			],
 			"author": "@fxxzz",
-			"repo": "https://github.com/fxxzz/Rules/raw/master/jksb.js",
+			"script": "https://github.com/fxxzz/Rules/raw/master/jksb.js",
+			"repo": "https://github.com/fxxzz/Rules",
 			"icons": [
-				"https://raw.githubusercontent.com/Orz-3/mini/master/elem.png",
-				"https://raw.githubusercontent.com/Orz-3/task/master/elem.png"
+				"https://raw.githubusercontent.com/Orz-3/mini/master/elem.png"
 			]
 		}
 
