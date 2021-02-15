@@ -3,13 +3,13 @@
 兼容: QuantumultX, Surge4, Loon, Shadowrocket
 
 获取Cookie说明：
-Safari打开jksb.v.zzu.edu.cn,登陆, 如通知成功获取cookie, 则可以使用此签到脚本.
+Safari打开jksb.v.zzu.edu.cn, 登陆, 如通知成功获取cookie, 则可以使用此签到脚本.
 获取Cookie后, 请将Cookie脚本禁用并移除主机名，以免产生不必要的MITM.
 脚本将在每天上午01:01执行, 您可以修改执行时间。
 
 
 ************************
-Surge 4.2.0+ 脚本配置:
+Surge,Shadowrocket脚本配置:
 ************************
 
 [Script]
@@ -21,7 +21,7 @@ hostname = jksb.v.zzu.edu.cn
 
 
 ************************
-QuantumultX 本地脚本配置:
+QuantumultX 脚本配置:
 ************************
 
 [task_local]
@@ -33,6 +33,19 @@ QuantumultX 本地脚本配置:
 
 [Mitm]
 hostname = jksb.v.zzu.edu.cn
+
+
+************************
+Loon 脚本配置:
+************************
+
+[Script]
+cron "1 1 * * *" script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js, tag=健康上报
+http-request ^https?:\/\/jksb\.v\.zzu\.edu\.cn\/ script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js, timeout=10, tag=健康上报-Cookies
+
+[Mitm]
+hostname = jksb.v.zzu.edu.cn
+
 */
 
 
