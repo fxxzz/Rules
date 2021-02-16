@@ -102,10 +102,10 @@ function getuid(){
       } else {
         text='Get ptopid❌'
       }
-      } catch(e) {
-        text='Get ptopid❌❌'
-      } finally {
-        console.log(text+": \n")
+    } catch(e) {
+      text='Get ptopid❌❌'
+    } finally {
+      console.log(text+": \n")
     }
   })
 }
@@ -171,11 +171,11 @@ function test(){
       } else {
         texttt='失败❌'
       }
-      } catch(e) {
-        texttt='失败❌❌'
-      } finally {
-        console.log(texttt+": \n")
-        $nobyda.notify("健康上报",texttt,"")
+    } catch(e) {
+      texttt='失败❌❌'
+    } finally {
+      console.log(texttt+": \n")
+      $nobyda.notify("健康上报",texttt,"")
     }
   })
 }
