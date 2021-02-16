@@ -9,7 +9,7 @@ Safari打开jksb.v.zzu.edu.cn, 登陆, 如通知成功获取cookie, 则可以使
 
 
 ************************
-Surge,Shadowrocket脚本配置:
+Surge4, Shadowrocket脚本配置:
 ************************
 
 [Script]
@@ -52,8 +52,8 @@ hostname = jksb.v.zzu.edu.cn
 var $nobyda = nobyda();
 var zzujksb=$nobyda.read('zzujksb')
 var head={
-        Cookie:zzujksb,
-          'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1'
+  Cookie:zzujksb,
+  'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1'
 }
 
 
@@ -62,7 +62,7 @@ var month=t.getMonth()+1;
 month = month<10?("0"+month):month;
 var day=t.getDate();
 day = day<10?("0"+day):day;
-datetoday='f0f">'+month+"月"+day+"日"
+datetoday='#f0f">'+month+"月"+day+"日"
 
 
 
@@ -90,7 +90,7 @@ function jksb(){
 
 
 function getuid(){
-  const url={
+  var url={
     url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/first0',
     headers:head
   }
@@ -104,7 +104,7 @@ function getuid(){
       }
       } catch(e) {
         text='Get ptopid❌❌'
-      }finally{
+      } finally {
         console.log(text+": \n")
     }
   })
@@ -113,7 +113,7 @@ function getuid(){
  
 
 function main() {
-  const url = {
+  var url = {
     url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
     headers:head,
     body:"day6=b&did=1&door=&men6=a&"+ uid
@@ -125,9 +125,9 @@ function main() {
       } else {
         textt ='Open❌'
       }
-    }catch(e){
+    } catch(e) {
       textt ='Open❌❌'
-    }finally{
+    } finally {
       console.log(textt+": \n")
     }
   })
@@ -136,7 +136,7 @@ function main() {
 
 
 function post() {
-  const url = {
+  bar url = {
     url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
     headers:head,
     body:"myvs_1=%E5%90%A6&myvs_2=%E5%90%A6&myvs_3=%E5%90%A6&myvs_4=%E5%90%A6&myvs_5=%E5%90%A6&myvs_6=%E5%90%A6&myvs_7=%E5%90%A6&myvs_8=%E5%90%A6&myvs_9=%E5%90%A6&myvs_10=%E5%90%A6&myvs_11=%E5%90%A6&myvs_12=%E5%90%A6&myvs_13a=41&myvs_13b=4101&myvs_13c=%E6%B2%B3%E5%8D%97%E7%9C%81.%E9%83%91%E5%B7%9E%E5%B8%82.%E6%96%B0%E5%AF%86%E5%B8%82&myvs_14=%E5%90%A6&myvs_14b=&memo22=%E6%88%90%E5%8A%9F%E8%8E%B7%E5%8F%96&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu=113.374641&weidu=34.562874&"+uid
@@ -148,9 +148,9 @@ function post() {
       } else {
         result='jksb❌'
       }
-    }catch(e){
+    } catch(e) {
       result='jksb❌❌'
-    }finally{
+    } finally {
       console.log(result+": \n")
     }
   })
@@ -159,7 +159,7 @@ function post() {
 
 
 function test(){
-  const url = {
+  var url = {
     url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=',
     headers:head,
     body:"day6=b&did=1&door=&men6=a&"+ uid
@@ -173,7 +173,7 @@ function test(){
       }
       } catch(e) {
         texttt='失败❌❌'
-      }finally{
+      } finally {
         console.log(texttt+": \n")
         $nobyda.notify("健康上报",texttt,"")
     }
