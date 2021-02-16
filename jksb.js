@@ -49,7 +49,8 @@ hostname = jksb.v.zzu.edu.cn
 */
 
 
-var $nobyda = nobyda();
+var $nobyda = nobyda()
+var uid
 var zzujksb=$nobyda.read('zzujksb')
 var head={
   Cookie:zzujksb,
