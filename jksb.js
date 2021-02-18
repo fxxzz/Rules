@@ -159,8 +159,9 @@ function test(){
   }
   $nobyda.get(url,function(error, response, data) {
     var aaa=String(data.toString().match(/\d\d月\d\d日/))
+    var bbb= new RegExp(aaa)
     try {
-      if (data.match(aaa)){
+      if (data.match(bbb)){
         texttt='成功'
       } else {
         texttt='失败❌'
