@@ -71,7 +71,6 @@ if ($nobyda.isRequest) {
 function jksb(){
   if (!zzujksb) {
     $nobyda.notify("健康打卡", "签到失败", "未获取到cookie");
-    $nobyda.done()
   }else{
   setTimeout(getuid,1000)
   setTimeout(main,2000)
@@ -88,15 +87,17 @@ function getuid(){
     headers:head
   }
   $nobyda.get(url,function(error, response, data) {
-    uid=String(data.toString().match(/\ptopid.*\d\d/))
+    uid=String(String(data).match(/\ptopid.*\d\d/))
     try {
       if (uid.length===63) {
         text='Get ptopid✔️'
       } else {
         text='Get ptopid❌'
+        console.log(error)
       }
     } catch(e) {
       text='Get ptopid❌❌'
+      console.log(error)
     } finally {
       console.log(text+": \n")
     }
@@ -120,6 +121,7 @@ function main() {
       }
     } catch(e) {
       textt ='Open❌❌'
+      console.log(error)
     } finally {
       console.log(textt+": \n")
     }
@@ -143,6 +145,7 @@ function post() {
       }
     } catch(e) {
       result='jksb❌❌'
+      console.log(error)
     } finally {
       console.log(result+": \n")
     }
@@ -158,7 +161,7 @@ function test(){
     body:"day6=b&did=1&door=&men6=a&"+uid
   }
   $nobyda.get(url,function(error, response, data) {
-    var aaa=String(data.toString().match(/\d\d月\d\d日/))
+    var aaa=String(String(data).match(/\d\d月\d\d日/))
     var bbb= new RegExp(aaa)
     try {
       if (data.match(bbb)){
@@ -168,9 +171,10 @@ function test(){
       }
     } catch(e) {
       texttt='失败❌❌'
+      console.log(error)
     } finally {
       console.log(texttt+": \n")
-      $nobyda.notify("健康上报",texttt,"")
+      $nobyda.notify("健康上报",texttt,error)
     }
   })
 }
