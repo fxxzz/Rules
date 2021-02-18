@@ -58,19 +58,12 @@ var head={
 }
 
 
-var t=new Date();
-var month=t.getMonth()+1;
-month = month<10?("0"+month):month;
-var day=t.getDate();
-day = day<10?("0"+day):day;
-datetoday='#f0f">'+month+"月"+day+"日"
-
-
 
 if ($nobyda.isRequest) {
   GetCookie()
 } else {
   jksb()
+  $done
 }
 
 
@@ -84,7 +77,6 @@ function jksb(){
   setTimeout(main,2000)
   setTimeout(post,3000)
   setTimeout(test,4000)
-  setTimeout($nobyda.done,5000)
   }
 }
 
@@ -163,11 +155,12 @@ function test(){
   var url = {
     url:'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb?'+uid+'&fun2=',
     headers:head,
-    body:"day6=b&did=1&door=&men6=a&"+ uid
+    body:"day6=b&did=1&door=&men6=a&"+uid
   }
   $nobyda.get(url,function(error, response, data) {
+    var aaa=String(data.toString().match(/\d\d月\d\d日/))
     try {
-      if (data.match(datetoday)){
+      if (data.match(aaa)){
         texttt='成功'
       } else {
         texttt='失败❌'
