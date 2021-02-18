@@ -52,6 +52,11 @@ hostname = jksb.v.zzu.edu.cn
 var $nobyda = nobyda()
 var uid
 var zzujksb=$nobyda.read('zzujksb')
+var zzu_13a=$nobyda.read('zzu_13a')
+var zzu_13b=$nobyda.read('zzu_13b')
+var zzu_13c=$nobyda.read('zzu_13c')
+var zzu_jingdu=$nobyda.read('zzu_jingdu')
+var zzu_weidu=$nobyda.read('zzu_weidu')
 var head={
   Cookie:zzujksb,
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1'
@@ -131,10 +136,11 @@ function main() {
 
 
 function post() {
+  var code="myvs_1=否&myvs_2=否&myvs_3=否&myvs_4=否&myvs_5=否&myvs_6=否&myvs_7=否&myvs_8=否&myvs_9=否&myvs_10=否&myvs_11=否&myvs_12=否&myvs_13a="+zzu_13a+"&myvs_13b="+zzu_13b+"&myvs_13c="+zzu_13c+"&myvs_14=否&myvs_14b=&memo22=成功获取&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu="+zzu_jingdu+"&weidu="+zzu_weidu+"&"
   var url = {
     url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
     headers:head,
-    body:"myvs_1=%E5%90%A6&myvs_2=%E5%90%A6&myvs_3=%E5%90%A6&myvs_4=%E5%90%A6&myvs_5=%E5%90%A6&myvs_6=%E5%90%A6&myvs_7=%E5%90%A6&myvs_8=%E5%90%A6&myvs_9=%E5%90%A6&myvs_10=%E5%90%A6&myvs_11=%E5%90%A6&myvs_12=%E5%90%A6&myvs_13a=41&myvs_13b=4101&myvs_13c=%E6%B2%B3%E5%8D%97%E7%9C%81.%E9%83%91%E5%B7%9E%E5%B8%82.%E6%96%B0%E5%AF%86%E5%B8%82&myvs_14=%E5%90%A6&myvs_14b=&memo22=%E6%88%90%E5%8A%9F%E8%8E%B7%E5%8F%96&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu=113.374641&weidu=34.562874&"+uid
+    body:encodeURI(code)+uid
   }
   $nobyda.post(url, (error, response, data) => {
     try{
