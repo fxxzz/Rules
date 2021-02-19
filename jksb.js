@@ -31,7 +31,7 @@ if ($nobyda.isRequest) {
   GetCookie()
 } else {
   jksb()
-  $done
+  $nobyda.done
 }
 
 
@@ -39,11 +39,13 @@ if ($nobyda.isRequest) {
 function jksb(){
   if (!zzujksb) {
     $nobyda.notify("健康打卡", "签到失败", "未获取到cookie");
+    $nobyda.done
   }else{
   setTimeout(getuid,1000)
   setTimeout(main,2000)
   setTimeout(post,3000)
   setTimeout(test,4000)
+  $nobyda.done
   }
 }
 
