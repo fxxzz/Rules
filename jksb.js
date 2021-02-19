@@ -1,36 +1,13 @@
 /*
+boxjs添加订阅:https://github.com/fxxzz/Rules/raw/master/box.json
+登陆jksb.v.zzu.edu.cn获取cookie,之后到boxjs,填写地理位置
 
-boxjs添加订阅
-https://github.com/fxxzz/Rules/raw/master/box.json
-首先添加mitm，登陆一次jksb.v.zzu.edu.cn获取cookie,之后到boxjs，手动添加地理位置
-[Mitm]
-hostname = jksb.v.zzu.edu.cn
-
-************************
-Surge
-************************
 
 [Script]
 健康上报-Cookie = type=http-request,pattern=^https?:\/\/jksb\.v\.zzu\.edu\.cn\/,script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js,script-update-interval=0
 健康上报 = type=cron,cronexp=1 1 * * *,script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js,script-update-interval=0
-
-************************
-QuantumultX
-************************
-
-[task_local]
-1 1 * * * https://github.com/fxxzz/Rules/raw/master/jksb.js, tag=健康上报, enabled=true
-[rewrite_local]
-//获取健康上报cookies
-^https?:\/\/jksb\.v\.zzu\.edu\.cn\/ url script-request-header https://github.com/fxxzz/Rules/raw/master/jksb.js
-
-************************
-Loon
-************************
-
-[Script]
-cron "1 1 * * *" script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js, tag=健康上报
-http-request ^https?:\/\/jksb\.v\.zzu\.edu\.cn\/ script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js, timeout=10, tag=健康上报-Cookies
+[Mitm]
+hostname = jksb.v.zzu.edu.cn
 
 */
 
