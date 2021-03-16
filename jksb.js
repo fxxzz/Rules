@@ -101,7 +101,7 @@ function main() {
 
 
 function post() {
-  var code="myvs_1=否&myvs_2=否&myvs_3=否&myvs_4=否&myvs_5=否&myvs_6=否&myvs_7=否&myvs_8=否&myvs_9=否&myvs_10=否&myvs_11=否&myvs_12=否&myvs_13a="+zzu_13a+"&myvs_13b="+zzu_13b+"&myvs_13c="+zzu_13c+"&myvs_14=否&myvs_14b=&memo22=成功获取&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu="+zzu_jingdu+"&weidu="+zzu_weidu+"&"
+  var code="myvs_1=否&myvs_2=否&myvs_3=否&myvs_4=否&myvs_5=否&myvs_6=否&myvs_7=否&myvs_8=否&myvs_9=否&myvs_10=否&myvs_11=否&myvs_12=否&myvs_13a="+zzu_13a+"&myvs_13b="+zzu_13b+"&myvs_13c="+zzu_13c+"&myvs_14=否&myvs_14b=&myvs_30=在校&memo22=成功获取&did=2&door=&day6=b&men6=a&sheng6=&shi6=&fun3=&jingdu="+zzu_jingdu+"&weidu="+zzu_weidu+"&"
   var url = {
     url: 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/jksb',
     headers:head,
