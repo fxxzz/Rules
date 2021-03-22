@@ -1,7 +1,4 @@
 /*
-boxjs添加订阅:https://github.com/fxxzz/Rules/raw/master/box.json
-登陆jksb.v.zzu.edu.cn获取cookie,之后到boxjs,填写地理位置
-
 
 [Script]
 健康上报-Cookie = type=http-request,pattern=^https?:\/\/jksb\.v\.zzu\.edu\.cn\/,script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js,script-update-interval=0
