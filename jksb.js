@@ -1,14 +1,3 @@
-/*
-
-[Script]
-健康上报-Cookie = type=http-request,pattern=^https?:\/\/jksb\.v\.zzu\.edu\.cn\/,script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js,script-update-interval=0
-健康上报 = type=cron,cronexp=1 1 * * *,script-path=https://github.com/fxxzz/Rules/raw/master/jksb.js,script-update-interval=0
-[Mitm]
-hostname = jksb.v.zzu.edu.cn
-
-*/
-
-
 var $nobyda = nobyda()
 var uid
 var zzujksb=$nobyda.read('zzujksb')
