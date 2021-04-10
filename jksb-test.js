@@ -1,5 +1,4 @@
 var $nobyda = nobyda()
-var uid
 var zzujksb=$nobyda.read('zzujksb')
 var zzu_13a=$nobyda.read('zzu_13a')
 var zzu_13b=$nobyda.read('zzu_13b')
@@ -40,20 +39,14 @@ function getuid(){
   }
     $nobyda.get(url,function(error, response, data) {
       uid=String(String(data).match(/\ptopid.*\d\d/))
-      try {
-        if (uid.length===63) {
-          text='Get ptopid✔️'
-        } else {
-          text='Get ptopid❌'
-          console.log(error)
-        }
-      } catch(e) {
-        text='Get ptopid❌❌'
+      if (uid.length===63) {
+        text='Get ptopid✔️'
+      } else {
+        text='Get ptopid❌'
         console.log(error)
-      } finally {
-        console.log(text+": \n")
       }
-      resolve();
+      console.log(text+": \n")
+      resolve()
     })
   })
 }
@@ -68,19 +61,13 @@ function main() {
       body:"day6=b&did=1&door=&men6=a&"+ uid
     }
     $nobyda.post(url, (error, response,data) => {
-      try {
-        if (data.match(/#00f">20/)) {
-          textt ='Open✔️'
-        } else {
-          textt ='Open❌'
-        }
-      } catch(e) {
-        textt ='Open❌❌'
-        console.log(error)
-      } finally {
-        console.log(textt+": \n")
+      if (String(data).match(/#00f">20/)) {
+        textt ='Open✔️'
+      } else {
+        textt ='Open❌'
       }
-      resolve();
+      console.log(textt+": \n")
+      resolve()
     })
   })
 }
@@ -96,19 +83,13 @@ function post() {
       body:encodeURI(code)+uid
     }
     $nobyda.post(url, (error, response, data) => {
-      try{
-        if (data.match(/感谢/)) {
-          texttt='jksb✔️'
-        } else {
-          texttt='jksb❌'
-        }
-      } catch(e) {
-        texttt='jksb❌❌'
-        console.log(error)
-      } finally {
-        console.log(texttt+": \n")
+      if (String(data).match(/感谢/)) {
+        texttt='jksb✔️'
+      } else {
+        texttt='jksb❌'
       }
-      resolve();
+      console.log(texttt+": \n")
+      resolve()
     })
   })
 }
@@ -123,22 +104,15 @@ function test(){
       body:"day6=b&did=1&door=&men6=a&"+uid
     }
     $nobyda.get(url,function(error, response, data) {
-      
       var bbb= "今日您已经填报过了"
-      try {
-        if (data.match(bbb)) {
-          textttt='成功'
-        } else {
-          textttt='失败❌'
-        }
-      } catch(e) {
-        textttt='失败❌❌'
-        console.log(error)
-      } finally {
-        console.log(textttt+": \n")
-        $nobyda.notify("健康上报",textttt,error)
+      if (String(data).match(bbb)) {
+        textttt='成功✔️'
+      } else {
+        textttt='失败❌'
       }
-      resolve();
+      console.log(textttt+": \n")
+      $nobyda.notify("健康上报",textttt,error)
+      resolve()
     })
   })
 }
@@ -220,12 +194,6 @@ function nobyda() {
     if (isSurge) isRequest ? $done(value) : $done()
   }
   return {
-    isRequest,
-    notify,
-    write,
-    read,
-    get,
-    post,
-    done
+    isRequest, notify, write, read, get, post, done
   }
 }
