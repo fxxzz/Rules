@@ -27,8 +27,8 @@ var head={
     console.log(error);
   })
   .finally(() => {
-    $done();
-  });
+    $done()
+  })
   
 
 
@@ -54,8 +54,8 @@ function getuid(){
         console.log(text+": \n")
       }
       resolve();
-    });
-  });
+    })
+  })
 }
 
  
@@ -81,8 +81,8 @@ function main() {
         console.log(textt+": \n")
       }
       resolve();
-    });
-  });
+    })
+  })
 }
 
 
@@ -98,19 +98,19 @@ function post() {
     $nobyda.post(url, (error, response, data) => {
       try{
         if (data.match(/感谢/)) {
-          result='jksb✔️'
+          texttt='jksb✔️'
         } else {
-          result='jksb❌'
+          texttt='jksb❌'
         }
       } catch(e) {
-        result='jksb❌❌'
+        texttt='jksb❌❌'
         console.log(error)
       } finally {
-        console.log(result+": \n")
+        console.log(texttt+": \n")
       }
       resolve();
-    });
-  });
+    })
+  })
 }
 
 
@@ -127,20 +127,20 @@ function test(){
       var bbb= "今日您已经填报过了"
       try {
         if (data.match(bbb)) {
-          texttt='成功'
+          textttt='成功'
         } else {
-          texttt='失败❌'
+          textttt='失败❌'
         }
       } catch(e) {
-        texttt='失败❌❌'
+        textttt='失败❌❌'
         console.log(error)
       } finally {
-        console.log(texttt+": \n")
-        $nobyda.notify("健康上报",texttt,error)
+        console.log(textttt+": \n")
+        $nobyda.notify("健康上报",textttt,error)
       }
       resolve();
-    });
-  });
+    })
+  })
 }
 
 
@@ -228,4 +228,4 @@ function nobyda() {
     post,
     done
   }
-};
+}
