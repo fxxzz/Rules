@@ -147,30 +147,14 @@ function test(){
 
 function GetCookie() {
   var headerCookie = $request.headers["Cookie"];
-  if (headerCookie) {
-    if ($nobyda.read("zzujksb") != undefined) {
-      if ($nobyda.read("zzujksb") != headerCookie) {
-        if (headerCookie.indexOf("zzu_zzj_20200302") != -1) {
-          var cookie = $nobyda.write(headerCookie, "zzujksb");
-          if (!cookie) {
-            $nobyda.notify("更新jksb-Cookie失败‼️", "", "");
-          } else {
-            $nobyda.notify("更新jksb-Cookie成功 🎉", "", "");
-          }
-        }
-      }
-    } else {
-      if (headerCookie.indexOf("zzu_zzj_20200302") != -1) {
-        var cookie = $nobyda.write(headerCookie, "zzujksb");
-        if (!cookie) {
-          $nobyda.notify("首次写入jksb-Cookie失败‼️", "", "");
-        } else {
-          $nobyda.notify("首次写入jksb-Cookie成功 🎉", "", "");
-        }
-      }
-    }
-  }
-  $nobyda.done()
+  if (headerCookie.indexOf("zzu_zzj_20200302") != -1) {
+    var cookie = $nobyda.write(headerCookie, "zzujksb");
+    if (!cookie) {
+      $nobyda.notify("更新jksb-Cookie失败‼️", "", "");
+     } else {
+       $nobyda.notify("更新jksb-Cookie成功 🎉", "", "");
+     }
+   }
 }
 
 
